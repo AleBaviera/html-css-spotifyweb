@@ -17,16 +17,19 @@ main{
   z-index: 2;
   display:flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 50px 0 250px ;
 }
 
 .search{
+  width: 20%;
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 
 aside{
-  width: 200px;
+  width: 250px;
   height: 100%;
   background-color: #282828;
   color:#787878;
@@ -39,7 +42,7 @@ aside{
 }
 aside img{
   max-width: 200px;
-  height: 100px;
+  height: auto;
 
 }
 
@@ -64,7 +67,7 @@ margin-left: 20px;
 }
 section{
   /* width: 100%; */
-  padding: 150px 0 0 200px;
+  padding: 150px 0 0 300px;
   position: relative;
   /* left:200px; */
   top:100px;
@@ -89,8 +92,9 @@ section{
   padding: 20px 30px;
 
 }
-.musicsection span img:hover{
-  transform-origin: bottom;
+.musicsection span a:hover{
+
+  background-image: radial-gradient(black gray);
 }
 .musicsection p{
   padding: 20px 30px;
@@ -112,4 +116,60 @@ footer{
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
+}
+.musicplayer{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icons{
+  width: 60%;
+  display:flex;
+  justify-content: space-between;
+}
+.slidecontainer {
+  width: 100%;
+  padding-top: 20px;
+  }
+  .time{
+  /* width: 100%; */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 80%; /* Full-width */
+  height: 5px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 5px; /* Slider handle height */
+  background: #282828;
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 10px; /* Slider handle height */
+  background: #282828;
+  cursor: pointer; /* Cursor on hover */
 }
