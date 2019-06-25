@@ -2,15 +2,17 @@
   margin: 0;
   padding:0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 main{
   width: 100vw;
   height: 90vh;
+
 }
 .navbar{
   width: 100%;
-  height: 50px;
+  height: 70px;
   background-color: #282828;
   color:#989898;
   position: fixed;
@@ -18,23 +20,41 @@ main{
   display:flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px 0 250px ;
+  padding: 10px 50px 0 250px ;
 }
 
 .search{
-  width: 20%;
+  width: 300px;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-@media screen and (max-width:600px) {
+.search input{
+  width: 200px;
+  height: 30px;
+  border-radius: 30px;
+}
+
+#menubar {
+  position: fixed;
+  z-index: 2;
+  display:flex;
+  justify-content: flex-start;
+  padding: 30px 0 0 280px ;
+  color:#989898;
+}
+#menubar a{
+  font-size: 40px;
+  color:#989898;
+}
+@media screen and (max-width:800px) {
   .navbar{
     display:none;
   }
 
 }
-@media screen and (min-width:601px) {
-  #menutoggle{
+@media screen and (min-width:801px) {
+  #menubar{
     display:none;
   }
 
@@ -51,7 +71,8 @@ aside{
   justify-content: space-between;
   position: fixed;
   z-index: 2;
-  padding-bottom: 150px;
+  padding: 20px 0 150px 10px;
+
 }
 aside img{
   max-width: 200px;
@@ -59,12 +80,17 @@ aside img{
 
 }
 
-aside ul li{
+aside ul li {
+
   list-style: none;
   padding: 10px;
-margin-left: 20px;
+  margin-left: 20px;
 }
-aside ul li:hover{
+aside ul li a{
+  text-decoration: none;
+  color: #787878;
+}
+aside ul li a:hover{
   color: white;
 }
 
@@ -80,8 +106,7 @@ margin-left: 20px;
   height: 150px;
 }
 section{
-
-  padding: 150px 0 0 300px;
+  padding: 50px 0 0 300px;
   position: relative;
   background-color: #534b5e;
   color:white;
@@ -104,13 +129,22 @@ section{
   padding: 20px 30px;
 
 }
-.musicsection span a:hover{
-
-  background-image: radial-gradient(black gray);
+/* .musicsection span a img{
+  opacity:1;
 }
+.musicsection span a:hover{
+  width: 200px;
+  height: 200px;
+  background-image:url("img/play.png");
+
+} */
 .musicsection p{
   padding: 20px 30px;
   align-items: center;
+}
+.musicsection img{
+  width: 200px;
+  height: 200px;
 }
 .circle img{
   border-radius: 50%;
@@ -128,6 +162,9 @@ footer{
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
+}
+.title h6{
+  line-height: 30px;
 }
 .musicplayer{
   width: 30%;
@@ -184,4 +221,52 @@ footer{
   height: 10px; /* Slider handle height */
   background: #282828;
   cursor: pointer; /* Cursor on hover */
+}
+
+
+.volume{
+  width: 10%;
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.volume span{
+  padding: 10px;
+
+}
+.slider #volumebar{
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 50%;
+  height: 5px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+
+}
+#volumebar::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 5px; /* Set a specific slider handle width */
+  height: 5px; /* Slider handle height */
+  background: green;
+  cursor: pointer; /* Cursor on hover */
+}
+
+#volumebar::-moz-range-thumb {
+  width: 5px; /* Set a specific slider handle width */
+  height: 5px; /* Slider handle height */
+  background: green;
+  cursor: pointer; /* Cursor on hover */
+}
+
+
+@media screen and (max-width:800px) {
+  .musicplayer{
+    width: 300px;
+  }
 }

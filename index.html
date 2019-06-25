@@ -15,18 +15,20 @@
       <header>
         <div class="navbar">
           <div class="search">
-            <input type="text" name="" value="">
-            <img src="https://img.icons8.com/ios-glyphs/30/000000/search-more.png">
+            <i class="fas fa-angle-left"></i>
+            <i class="fas fa-angle-right"></i>
+            <input type="text" name="" value=" cerca">
+            <i class="fas fa-search"></i>
           </div>
           <div class="">
-            <span class="user"><i class="fas fa-user"></i></span>
+            <span class="user"><i class="fas fa-user"></i> User</span>
           </div>
         </div>
-        <nav role="navigation">
-  <div id="menutoggle">
-    
-  </div>
-</nav>
+        <div id="menubar">
+          <a href="#">
+            <i class="fas fa-bars"></i>
+          </a>
+        </div>
       </header>
 
       <!-- container principale -->
@@ -42,9 +44,9 @@
                 <ul>
 
 
-                <li><i class="fas fa-home"></i> Home</li>
-                <li><i class="fas fa-broadcast-tower"></i> Radio</li>
-                <li><i class="fas fa-download"></i> Download</li>
+                <li><a href="#"><i class="fas fa-home"></i> Home  </a></li>
+                <li><a href="#"><i class="fas fa-broadcast-tower"></i> Radio</a></li>
+                <li><a href="#"><i class="fas fa-download"></i> Download</a></li>
                 </ul>
 
                 <div class="nowplaying">
@@ -57,12 +59,18 @@
 
             <!-- main section flex -->
             <section>
+              <!-- <div id="menubar">
+                <span>
+                <i class="fas fa-bars"></i>
+                </span>
+              </div> -->
               <h3>Create per te</h3>
               <div class="musicsection">
 
 
 
-                <span>  <img src="img/download-1.jpeg" alt=""> <p>cypress hill</p></span>
+                <span>  <a href="#">
+                  <img src="img/download-1.jpeg" alt=""></a> <p>cypress hill</p></span>
                 <span>  <img src="img/download-2.jpeg" alt=""> <p>Fugees</p></span>
                 <span class="circle">  <img src="img/download-6.jpeg" alt=""><p>the roots</p></span>
                 <span>  <img src="img/download-3.jpeg" alt=""><p>lauryn hill</p></span>
@@ -94,8 +102,8 @@
     <footer>
 
       <div class="title">
-        <h6>Lost Ones</h6>
-        <p>Ms. Lauryn Hill</p>
+        <p>Lost Ones</p>
+        <h6>Ms. Lauryn Hill</h6>
       </div>
       <div class="musicplayer">
         <div class="icons">
@@ -120,6 +128,9 @@
 
       </div>
       <div class="volume">
+        <span><i class="fas fa-volume-down"></i></span>
+        <input type="range" min="1" max="100" value="50" class="slider" id="volumebar">
+
         <span><i class="fas fa-volume-up"></i></span>
       </div>
     </footer>
