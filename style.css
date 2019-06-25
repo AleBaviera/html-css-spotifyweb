@@ -50,10 +50,16 @@ main{
 
 #menulist{
   display: none;
+
 }
 
-#menubar a:hover{
+#menubar a:hover #menulist{
+  display: block;
 
+}
+#menulist ul li{
+  list-style: none;
+  text-decoration: none;
 }
 @media screen and (max-width:800px) {
   .navbar{
@@ -198,15 +204,8 @@ section{
   padding: 20px 30px;
 
 }
-/* .musicsection span a img{
-  opacity:1;
-}
-.musicsection span a:hover{
-  width: 200px;
-  height: 200px;
-  background-image:url("img/play.png");
 
-} */
+
 .musicsection p{
   padding: 20px 30px;
   align-items: center;
@@ -215,6 +214,20 @@ section{
   width: 200px;
   height: 200px;
 }
+
+.play-hover{
+  display: none;
+}
+
+.musicsection span a:hover .play-hover{
+  display:inline;
+  position: absolute;
+  transform: translate(0, -100%);
+
+}
+
+
+
 .circle img{
   border-radius: 50%;
 }
