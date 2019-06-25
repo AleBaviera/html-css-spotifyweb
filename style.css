@@ -183,7 +183,7 @@ margin-left: 20px;
 section{
   padding: 50px 0 0 300px;
   position: relative;
-  background-color: #534b5e;
+  background-color: #3d3b3b;
   color:white;
   display: flex;
   flex-flow: row wrap;
@@ -294,14 +294,14 @@ footer{
   appearance: none;
   width: 25px; /* Set a specific slider handle width */
   height: 5px; /* Slider handle height */
-  background: #282828;
+  background: green;
   cursor: pointer; /* Cursor on hover */
 }
 
 .slider::-moz-range-thumb {
   width: 25px; /* Set a specific slider handle width */
   height: 10px; /* Slider handle height */
-  background: #282828;
+  background: green;
   cursor: pointer; /* Cursor on hover */
 }
 
