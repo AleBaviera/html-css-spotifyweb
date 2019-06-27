@@ -1,4 +1,4 @@
 
+// alert('Hello World!');
 
-
-document.getElementById('user')='pippA'
+document.getElementById('user').innerHTML+='pippA';
