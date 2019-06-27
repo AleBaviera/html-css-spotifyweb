@@ -213,12 +213,14 @@ section{
 
 .play-hover{
   display: none;
+  
 }
 
 .musicsection div a:hover .play-hover{
   display:inline;
   position: absolute;
-  transform: translate(0, -100%);
+  transform: scale(0.5)translate(0,-200%);
+  opacity: 0.8;
 
 }
 
